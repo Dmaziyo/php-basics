@@ -6,6 +6,7 @@
     - [tailwind的提示无法在php文件中使用](#tailwind的提示无法在php文件中使用)
 - [Lessons](#lessons)
     - [Environments and Configuration](#environments-and-configuration)
+    - [SQL Injection Vulnerabilities Explained](#sql-injection-vulnerabilities-explained)
 
 
 
@@ -32,3 +33,17 @@ module.exports = {}
 ```
 - [x] 硬编码的值改成动态传入
 - [x] 定义的配置变量放置在配置文件中
+
+#### SQL Injection Vulnerabilities Explained
+- [x] 获取url上的query,实现动态查询数据
+ ```php
+$id = $_GET['id'];
+$query = "select * from where id ={$id}"
+//  虽然可以获取到id，但是用户可以在这个id上编写下述代码来攻击数据库
+//  localhost:8888/?id=1;drop table users;
+
+ ```
+- [x] 禁止内联变量在sql语句中,在execute中bind参数
+```php
+$statement->execute($params)
+```
