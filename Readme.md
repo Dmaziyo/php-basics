@@ -7,6 +7,7 @@
 - [Lessons](#lessons)
     - [Environments and Configuration](#environments-and-configuration)
     - [SQL Injection Vulnerabilities Explained](#sql-injection-vulnerabilities-explained)
+    - [Notes: mini project](#notes-mini-project)
 
 
 
@@ -47,3 +48,19 @@ $query = "select * from where id ={$id}"
 ```php
 $statement->execute($params)
 ```
+
+#### Notes: mini project 
+- [x] 数据库建表
+```js
+// 表的结构
+notes: id body
+users: id name email(唯一值) 
+```
+  - [x] 建立user和notes表，以及关联外键(user删除时同时删除相关notes)
+- [ ] 渲染出notes page
+  - [ ] 创建并添加notes路由
+  - [ ] 添加notes页面
+  - [ ] 连接从数据库中拿到数据
+  - [ ] 在view中渲染拿到的数据
+  - [ ] 每条内容能够点击跳转详情note
+  - [ ] 添加note页面
