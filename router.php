@@ -8,7 +8,7 @@ $routes = [
     '/note'  => 'controllers/note.php',
 ];
 
-function abort($code)
+function abort($code = Response::NOT_FOUND)
 {
 
     http_response_code($code);
@@ -21,7 +21,7 @@ function routeToController($url, $routes)
     if (array_key_exists($url, $routes)) {
         require $routes[$url];
     } else {
-        abort(404);
+        abort(Response::NOT_FOUND);
     }
 }
 
