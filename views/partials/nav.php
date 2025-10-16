@@ -10,6 +10,7 @@
               <!-- Current: "bg-gray-900 dark:bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
               <a href="/" aria-current="page" class="<?php echo urlIs('/') ? 'bg-gray-900 text-white ' : 'text-gray-300 '; ?>rounded-md px-3 py-2 text-sm font-medium   dark:bg-gray-950/50">Home</a>
               <a href="/about" aria-current="page" class="<?php echo urlIs('/about') ? 'bg-gray-900 text-white ' : 'text-gray-300 ';?>rounded-md  px-3 py-2 text-sm font-medium  dark:bg-gray-950/50">About</a>
+              <a href="/notes" aria-current="page" class="<?php echo urlIs('/notes') ? 'bg-gray-900 text-white ' : 'text-gray-300 ';?>rounded-md  px-3 py-2 text-sm font-medium  dark:bg-gray-950/50">Notes</a>
             </div>
           </div>
         </div>

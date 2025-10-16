@@ -16,7 +16,7 @@ class Database
     }
 
     // make it more flexible
-    public function query($query, $params)
+    public function query($query, $params=[])
     {
 
         $statement = $this->connection->prepare($query);
