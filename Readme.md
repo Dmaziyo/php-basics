@@ -88,3 +88,9 @@ users: id name email(唯一值)
     <!-- after -->
     authorize($note['user_id'] !== $currentUserId);
     ```
+- [] 实现新增note
+  - [ ] 在notes页添加一个新建按钮用于跳转至创建页面
+  - [ ] 并将routes从router中抽离到单独的文件
+  - [ ] 新增create页面
+    - [ ] 添加表单,实现上传表单发送post请求
+    - [ ] 判断是否为post请求，并将传的参数打印出来
