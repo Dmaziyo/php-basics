@@ -10,3 +10,11 @@ function urlIs($url)
 {
     return $_SERVER['REQUEST_URI'] === $url;
 }
+
+function authorize($validation, $status = Response::FORBIDDEN)
+{
+    if (! $validation) {
+        abort($status);
+    }
+    return true;
+}

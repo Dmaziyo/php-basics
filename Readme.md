@@ -67,6 +67,24 @@ users: id name email(唯一值)
 - [x] 身份校验&状态码
   - [x] 实现404和403状态码页面:处理note不存在&note不属于当前用户的情况
   - [x] 建立状态码文件用于全局使用 
-  - [ ] 重构
-    - [ ] 将fetch和abort的代码整合在一起，当没有数据时就自动abort
-    - [ ] 将校验的逻辑封装成一个函数，通过传参的形式来获取判断条件
+  - [x] 重构
+    - [x] 将fetch和abort的代码整合在一起，当没有数据时就自动abort
+    ```php
+      <!-- before -->
+      $note = $db->query('select * from notes where id = :id', ['id' => $_GET["id"]])->fetchOrAbort();
+
+      if (! $note) {
+          abort();
+      }
+      <!--after-->
+      $note = $db->query('select * from notes where id = :id', ['id' => $_GET["id"]])->fetchAndAbort(); //这个写法有点像promise；返回其自身
+    ```
+    - [x] 将校验的逻辑封装成一个函数，通过传参的形式来获取判断条件
+    ```php
+    <!-- before -->
+    if ($note['user_id'] !== $currentUserId) {
+        abort(Response::FORBIDDEN);
+    }
+    <!-- after -->
+    authorize($note['user_id'] !== $currentUserId);
+    ```
