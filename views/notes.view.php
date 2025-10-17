@@ -12,6 +12,9 @@
           </a>
         </li>
         <?php endforeach; ?>
+        <a href="/notes/create" class="inline-block mt-5 p-1 hover:cursor-pointer bg-gray-200 rounded">
+          Create
+        </a>
   </div>
 </main>
 <?php require 'partials/footer.php'?>

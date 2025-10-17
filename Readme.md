@@ -89,8 +89,13 @@ users: id name email(唯一值)
     authorize($note['user_id'] !== $currentUserId);
     ```
 - [] 实现新增note
-  - [ ] 在notes页添加一个新建按钮用于跳转至创建页面
-  - [ ] 并将routes从router中抽离到单独的文件
-  - [ ] 新增create页面
-    - [ ] 添加表单,实现上传表单发送post请求
-    - [ ] 判断是否为post请求，并将传的参数打印出来
+  - [x] 在notes页添加一个新建按钮用于跳转至创建页面
+  - [x] 并将routes从router中抽离到单独的文件
+  - [x] 新增create页面
+    - [x] 添加表单,实现上传表单发送post请求
+    - [x] 判断是否为post请求，并将传的参数打印出来
+    ```php
+    $method = $_SERVER['REQUEST_METHOD'] //判断请求方式
+    $params = $_POST
+    ```
+    - [x] 使用tailwind官网提供的现成的表单
