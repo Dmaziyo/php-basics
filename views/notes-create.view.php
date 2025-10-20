@@ -8,9 +8,9 @@
 <form method="post">
   <div class="space-y-12">
     <div class="col-span-full">
-          <label for="about" class="block text-sm/6 font-medium text-gray-900">Content</label>
+          <label for="body" class="block text-sm/6 font-medium text-gray-900">Content</label>
           <div class="mt-2">
-            <textarea placeholder="You can write whatever you want..." id="about" name="about" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
+            <textarea placeholder="You can write whatever you want..." id="body" name="body" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
           </div>
         </div>
   </div>
